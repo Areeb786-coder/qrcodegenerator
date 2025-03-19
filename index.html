@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">QRGenerator</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>QR Code Generator</h1>
+      <p class="subtitle">Create stunning QR codes for websites, social media, and WhatsApp contacts in seconds!</p>
+
+      <div class="form-container">
+        <label for="qr-type">Select QR Type:</label>
+        <select id="qr-type">
+            <option value="website">🌐 Website URL</option>
+            <option value="facebook">📘 Facebook</option>
+            <option value="twitter">🐦 Twitter</option>
+            <option value="instagram">📸 Instagram</option>
+            <option value="linkedin">🔗 LinkedIn</option>
+            <option value="whatsapp">💬 WhatsApp Contact</option>
+          </select>
+
+        <div id="input-fields">
+          <!-- Dynamic input fields will be injected here -->
+        </div>
+
+        <label for="qr-size">QR Code Size:</label>
+        <input type="number" id="qr-size" min="100" max="500" value="200" placeholder="Enter QR Code Size (100-500)">
+
+        <div class="button-group">
+          <button id="generate-btn"><i class="fas fa-qrcode"></i> Generate QR Code</button>
+          <button id="clear-btn"><i class="fas fa-trash"></i> Clear</button>
+        </div>
+      </div>
+
+      <div id="qr-code-container">
+        <!-- Generated QR code will be displayed here -->
+      </div>
+
+      <button id="download-btn" class="hidden"><i class="fas fa-download"></i> Download QR Code</button>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fas fa-globe"></i>
+          <h3>Website QR Codes</h3>
+          <p>Generate QR codes for any website URL instantly.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-share-alt"></i>
+          <h3>Social Media QR Codes</h3>
+          <p>Create QR codes for Facebook, Instagram, Twitter, and LinkedIn.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-comment"></i>
+          <h3>WhatsApp QR Codes</h3>
+          <p>Generate QR codes to share your WhatsApp contact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>QRGen is a powerful and easy-to-use QR code generator designed to help you create QR codes for websites, social media profiles, and WhatsApp contacts. Built with simplicity and efficiency in mind, QRGen is perfect for personal and professional use.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>Website Build By <strong>Muhammad Areeb Ejaz</strong></p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
